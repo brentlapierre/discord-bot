@@ -39,3 +39,14 @@ export interface IGuild extends mongoose.Document {
   id: string;
   joinedAt: Date;
 }
+
+export interface IMusic extends mongoose.Document {
+  id: string;
+  guild: string;
+  createdAt: Date;
+  playlist: {
+    name: string;
+    url: string;
+  }
+  playing: boolean;
+}
